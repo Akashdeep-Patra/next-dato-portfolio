@@ -21,7 +21,7 @@ const Header: React.FC<HeaderProps> = () => {
   };
   return (
     <motion.div className='flex items-center	 flex-row m-5 justify-between min-w-max'>
-      <HeaderIcon className='max-w-[100px] max-h-[100px] bg-indigo-400 p-4 rounded-[50px]' />
+      <HeaderIcon className='max-w-[100px] max-h-[100px]  p-4 ' />
       <motion.button
         animate={theme}
         variants={variants}
