@@ -1,5 +1,9 @@
 import { datoCmsRequest } from './datocms';
-import { RESPONSIVE_IMAGE_FRAGMENT, META_TAGS_FRAGMENT } from './fragment';
+import {
+  RESPONSIVE_IMAGE_FRAGMENT,
+  META_TAGS_FRAGMENT,
+  heroModuleFragment,
+} from './fragment';
 export async function getAllPagesSlugs() {
   const query = `
       {
@@ -39,8 +43,12 @@ export async function getDynamicPageBySlug(slug: string) {
           }
           debugModules
           title
+          modules {
+            ${heroModuleFragment}
+          }
         }
       }
+      ${RESPONSIVE_IMAGE_FRAGMENT}
     `;
   const result: {
     allPages: {

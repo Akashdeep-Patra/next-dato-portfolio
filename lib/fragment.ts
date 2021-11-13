@@ -20,7 +20,9 @@ const MODULE_BASE_FRAGMENT = `
   name
   marginBottom
   marginTop
-  accentColor
+  accentColor{
+    hex
+  }
 `;
 
 export const META_TAGS_FRAGMENT = `
@@ -34,25 +36,12 @@ export const heroModuleFragment = `
     ${MODULE_BASE_FRAGMENT}
     headline
     subtext
-    price
-    priceCaption
     ctaLabel
     ctaUrl
-    ctaTrackerEvent
-    secondaryCtaLabel
     scrollDownAsset {
       url
     }
-    scrollDownText
-    headlineTextSize {
-      value
-    }
-    subtextTextSize {
-      value
-    }
-    layout {
-      value
-    }
+    layout
     media {
       id
       url
@@ -60,13 +49,6 @@ export const heroModuleFragment = `
         thumbnailUrl
         mp4Url
       }
-      responsiveImage(imgixParams: {auto: format, q: 60, fit: max, w: 1800})  {
-        ...responsiveImageFragment
-      }
-    }
-    videoThumbnail {
-      id
-      url
       responsiveImage(imgixParams: {auto: format, q: 60, fit: max, w: 1800})  {
         ...responsiveImageFragment
       }

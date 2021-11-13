@@ -13,6 +13,8 @@ import { renderMetaTags } from 'react-datocms';
 import { InferGetStaticPropsType, NextPage } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import ModuleContainer from '../components/Modules';
+import ModularComponent from '../components/ModularComponent';
 export const getStaticProps = async ({
   params,
 }: {
@@ -59,7 +61,7 @@ const DynamicPage = ({
   useEffect(() => {
     if (containerRef) containerRef?.current?.focus();
   }, [containerRef]);
-
+  const { modules } = pageData;
   const initial = killTransitionIn ? false : { opacity: 0 };
 
   return (
@@ -80,7 +82,23 @@ const DynamicPage = ({
           />
         </Head>
         <Header />
-        <motion.h1>{pageData.title as string}</motion.h1>
+        {modules.map((module: any) => {
+          const moduleDomId = module.name?.toLowerCase().split(' ').join('_');
+          module.moduleDomId = moduleDomId;
+
+          return (
+            <ModuleContainer
+              key={`module-container-${module.id}`}
+              id={`module_${moduleDomId}`}
+              debug={pageData.debugModules}
+              moduleName={module.name}
+              accentColor={module.accentColor}
+              killTransitionIn={killTransitionIn}
+            >
+              <ModularComponent key={module.id} module={module} />
+            </ModuleContainer>
+          );
+        })}
         <Footer />
       </motion.div>
     </AnimatePresence>
