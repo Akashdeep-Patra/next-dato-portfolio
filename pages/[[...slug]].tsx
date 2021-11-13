@@ -7,10 +7,8 @@ import {
 import { AnimatePresence, motion } from 'framer-motion';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { arrayOf, bool, shape, string } from 'prop-types';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { renderMetaTags } from 'react-datocms';
-import { InferGetStaticPropsType, NextPage } from 'next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ModuleContainer from '../components/Modules';
@@ -41,6 +39,7 @@ export const getStaticPaths = async () => {
     allPages?.map((page) => ({
       params: { slug: [page.slug], pageType: 'normal' },
     })) || [];
+
   return {
     paths: [...formattedPages, ,],
     fallback: false,
