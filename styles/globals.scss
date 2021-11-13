@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+/**
+ * @license
+ * MyFonts Webfont Build ID 4021403, 2021-03-01T16:11:33-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Gilroy-Thin by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/thin/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-UltraLightItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/ultra-light-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-ThinItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/thin-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-SemiBoldItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/semi-bold-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-SemiBold by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/semi-bold/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-UltraLight by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/ultra-light/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-Regular by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/regular/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-RegularItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/regular-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-MediumItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/medium-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-Medium by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/medium/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-LightItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/light-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-Light by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/light/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-HeavyItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/heavy-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-Heavy by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/heavy/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-ExtraBoldItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/extra-bold-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-ExtraBold by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/extra-bold/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-BoldItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/bold-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-Bold by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/bold/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-BlackItalic by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/black-italic/
+ * Copyright: Copyright &amp;#x00A9; 2015 by Radomir Tinkov. All rights reserved.
+ *
+ * Webfont: Gilroy-Black by Radomir Tinkov
+ * URL: https://www.myfonts.com/fonts/radomir-tinkov/gilroy/black/
+ * Copyright: Copyright &amp;#x00A9; 2016 by Radomir Tinkov. All rights reserved.
+ *
+ *
+ *
+ * © 2021 MyFonts Inc
+*/
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url('//hello.myfonts.net/count/3d5c9b');
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 800;
+  font-display: fallback;
+  src: url('/assets/fonts/GilroyExtraBold/font.woff2') format('woff2'),
+    url('/assets/fonts/GilroyExtraBold/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url('/assets/fonts/GilroyBold/font.woff2') format('woff2'),
+    url('/assets/fonts/GilroyBold/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 600;
+  font-display: fallback;
+  src: url('/assets/fonts/GilroySemiBold/font.woff2') format('woff2'),
+    url('/assets/fonts/GilroySemiBold/font.woff2') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 500;
+  font-display: fallback;
+  src: url('/assets/fonts/GilroyMedium//font.woff2') format('woff2'),
+    url('/assets/fonts/GilroyMedium/font.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 300;
+  font-display: fallback;
+  src: url('/assets/fonts/GilroyLight/font.woff2') format('woff2'),
+    url('/assets/fonts/GilroyLight/font.woff') format('woff');
+}
+@tailwind utilities;
