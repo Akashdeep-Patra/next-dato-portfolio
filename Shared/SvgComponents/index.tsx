@@ -1,7 +1,8 @@
-export const HeaderIcon: React.FC<{
+export interface SvgProps {
   className?: string;
   style?: React.CSSProperties;
-}> = ({ className, style }) => (
+}
+export const HeaderIcon: React.FC<SvgProps> = ({ className, style }) => (
   <svg
     className={className}
     style={style}

@@ -1,22 +1,40 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HeaderIcon } from '../../Shared/SvgComponents';
+import { ImSun } from 'react-icons/im';
 import { useTheme } from 'next-themes';
-
+import { BsMoonStars } from 'react-icons/bs';
 export interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
   const { theme, setTheme } = useTheme();
-
+  const variants = {
+    light: {
+      scale: [1, 1.9, 1],
+      rotate: [0, 70, 0],
+      borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+    },
+    dark: {
+      scale: [1, 1.9, 1],
+      rotate: [0, 160, 0],
+      borderRadius: ['20%', '20%', '50%', '50%', '20%'],
+    },
+  };
   return (
     <motion.div className='flex items-center	 flex-row m-5 justify-between min-w-max'>
       <HeaderIcon className='max-w-[100px] max-h-[100px] bg-indigo-400 p-4 rounded-[50px]' />
       <motion.button
+        animate={theme}
+        variants={variants}
         aria-label='Toggle Dark Mode'
         type='button'
-        className='p-5 text-center flex flex-col justify-center bg-green-800 rounded-[6px] text-white  dark:bg-green-400 h-5'
+        className='p-5 text-center flex flex-col justify-center rounded-[6px] dark:text-white text-black '
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
-        Toggle
+        {theme === 'light' ? (
+          <ImSun size={40} className='' />
+        ) : (
+          <BsMoonStars size={40} className='' />
+        )}
       </motion.button>
     </motion.div>
   );
