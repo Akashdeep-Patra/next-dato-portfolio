@@ -2,19 +2,8 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { renderMetaTags } from 'react-datocms';
 import { useRouter } from 'next/router';
-import {
-  GetStaticProps,
-  GetStaticPaths,
-  GetServerSideProps,
-  InferGetStaticPropsType,
-} from 'next';
-import {
-  getAllPagesSlugs,
-  getDynamicPageBySlug,
-  getSiteMetaTags,
-} from '../lib/api';
-import { NextPage } from 'next';
-import { arrayOf, shape, string } from 'prop-types';
+import { InferGetStaticPropsType } from 'next';
+import { getDynamicPageBySlug, getSiteMetaTags } from '../lib/api';
 
 export const getStaticProps = async () => {
   const siteMetaTags = await getSiteMetaTags();
@@ -36,9 +25,6 @@ const DynamicPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const metaTags = pageData.seo.concat(siteData.siteMetaTags.favicon);
   //   const { modules } = pageData;
-  const router = useRouter();
-  const isGetStartedModalOpen = router.query['get-started'];
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -51,24 +37,6 @@ const DynamicPage = ({
       </div>
     </motion.div>
   );
-};
-
-DynamicPage.propTypes = {
-  pageData: shape({
-    modules: arrayOf(shape({})),
-  }),
-  appProps: shape({
-    footerMessage: string,
-    footerLinks: arrayOf(
-      shape({
-        id: string,
-        title: string,
-        slug: string,
-      })
-    ),
-    navigation: arrayOf(shape({})),
-  }),
-  siteData: shape({}),
 };
 
 export default DynamicPage;
