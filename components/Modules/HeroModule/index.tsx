@@ -64,13 +64,13 @@ const HeroModule: React.FC<HeroModuleProps> = ({
   return (
     <div id={moduleDomId} className='grid gap-8 grid-cols-1 md:grid-cols-12'>
       <motion.h1
-        className='md:col-start-1 md:col-span-7 text-6xl font-extrabold self-center dark:text-gray-300'
+        className='md:col-start-1 md:col-span-5 text-5xl font-extrabold  dark:text-gray-300'
         variants={childrenVariants}
       >
         {headline}
       </motion.h1>
       <motion.div
-        className='md:row-start-2 md:col-start-1 md:col-span-7'
+        className='md:row-start-2 md:col-start-1 md:col-span-5'
         variants={childrenVariants}
       >
         {subtext && (
@@ -84,7 +84,7 @@ const HeroModule: React.FC<HeroModuleProps> = ({
       </motion.div>
       {ctaLabel && ctaUrl && (
         <motion.div
-          className='md:col-start-1 md:row-start-3 md:col-span-7 '
+          className='md:col-start-1 md:row-start-3 md:col-span-5 '
           variants={childrenVariants}
         >
           <motion.div className=''>
@@ -120,7 +120,7 @@ const HeroModule: React.FC<HeroModuleProps> = ({
         </motion.div>
       )}
       <motion.div
-        className='md:col-start-8 md:col-span-5 md:row-start-1'
+        className='md:col-start-6 md:col-span-7 md:row-start-1 md:row-span-2'
         variants={childrenVariants}
         ref={heroImageRef}
       >
