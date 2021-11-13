@@ -1,5 +1,7 @@
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
+
 /**
  * @license
  * MyFonts Webfont Build ID 4021403, 2021-03-01T16:11:33-0500
@@ -142,4 +144,3 @@
   src: url('/assets/fonts/GilroyLight/font.woff2') format('woff2'),
     url('/assets/fonts/GilroyLight/font.woff') format('woff');
 }
-@tailwind utilities;

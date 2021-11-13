@@ -51,9 +51,7 @@ export async function getDynamicPageBySlug(slug: string) {
       title: string;
     }[];
   } = await datoCmsRequest(query, { slug });
-  console.log('====================================');
-  console.log({ result });
-  console.log('====================================');
+
   const pageData = result.allPages[0];
 
   //   // eslint-disable-next-line no-restricted-syntax

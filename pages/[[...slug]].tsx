@@ -8,10 +8,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { renderMetaTags } from 'react-datocms';
 import { InferGetStaticPropsType, NextPage } from 'next';
-
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 export const getStaticProps = async ({
   params,
 }: {
@@ -65,21 +66,22 @@ const DynamicPage = ({
     <AnimatePresence>
       <motion.div
         ref={containerRef}
-        className={''}
+        className='max-w-screen-xl	 mx-auto'
         initial={initial}
         animate={{ opacity: 1, transition: { duration: 0.3 } }}
         exit={{ opacity: 0, transition: { duration: 0.1 } }}
+        role='main'
       >
-        <div role='main'>
-          <Head>
-            {renderMetaTags(metaTags)}̦{/* //Add acme fonts */}
-            <link
-              href='https://fonts.googleapis.com/css2?family=Acme&display=swap'
-              rel='stylesheet'
-            />
-          </Head>
-          <motion.h1>{pageData.title as string}</motion.h1>
-        </div>
+        <Head>
+          {renderMetaTags(metaTags)}̦{/* //Add acme fonts */}
+          <link
+            href='https://fonts.googleapis.com/css2?family=Acme&display=swap'
+            rel='stylesheet'
+          />
+        </Head>
+        <Header />
+        <motion.h1>{pageData.title as string}</motion.h1>
+        <Footer />
       </motion.div>
     </AnimatePresence>
   );

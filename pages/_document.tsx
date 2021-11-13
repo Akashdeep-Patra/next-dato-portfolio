@@ -1,9 +1,11 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <Html lang='en'>
+      <Html className='dark:bg-green-500' lang='en'>
         <Head>
           <meta charSet='utf-8' />
           {/* <link
