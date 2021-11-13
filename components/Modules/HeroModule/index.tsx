@@ -124,17 +124,7 @@ const HeroModule: React.FC<HeroModuleProps> = ({
         variants={childrenVariants}
         ref={heroImageRef}
       >
-        {media?.responsiveImage ? (
-          // eslint-disable-next-line jsx-a11y/alt-text
-          <DatoImage data={media.responsiveImage} />
-        ) : (
-          <Image
-            objectFit='cover'
-            layout='fill'
-            alt={headline}
-            src={media.url}
-          />
-        )}
+        {media?.responsiveImage && <DatoImage data={media.responsiveImage} />}
       </motion.div>
     </div>
   );
