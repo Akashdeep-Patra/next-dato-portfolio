@@ -93,6 +93,8 @@ const DynamicPage = ({
               moduleName={module.name}
               accentColor={module.accentColor}
               killTransitionIn={killTransitionIn}
+              marginBottom={module.marginBottom}
+              marginTop={module.marginTop}
             >
               <ModularComponent key={module.id} module={module} />
             </ModuleContainer>

@@ -1,16 +1,18 @@
 import { useState, useEffect, useRef } from 'react';
 import { useWindowSize } from 'react-use';
 import { useIntersection } from 'use-intersection';
-import { node, bool, string } from 'prop-types';
 import { motion, usePresence } from 'framer-motion';
 import { staggerChildrenContainerVariants } from '../../constants';
+import { useTheme } from 'next-themes';
 export interface ModuleContainerProps {
   id: string;
   children: React.ReactNode;
   moduleName: string;
-  accentColor: string;
+  accentColor: { hex: string };
   killTransitionIn: boolean;
   debug: boolean;
+  marginBottom: boolean;
+  marginTop: boolean;
 }
 const ModuleContainer: React.FC<ModuleContainerProps> = ({
   id,
@@ -19,6 +21,8 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
   moduleName,
   accentColor,
   killTransitionIn,
+  marginBottom,
+  marginTop,
 }) => {
   const [isPresent, safeToRemove] = usePresence();
   const { height } = useWindowSize();
@@ -29,6 +33,7 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
     threshold: 0,
     once: true,
   });
+  const { theme } = useTheme();
 
   const [isInView, setIsInView] = useState(intersecting);
   useEffect(() => {
@@ -52,11 +57,21 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
     if (!isPresent) safeToRemove?.call(this);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isPresent]);
-
   const hidden = killTransitionIn ? false : ['initialFade', 'initialSlide'];
   const animateIn = ['fadeIn', 'slideIn'];
+  const containerStyle: any = {};
+  if (theme === 'light' && accentColor?.hex) {
+    containerStyle['backgroundColor'] = accentColor.hex;
+  }
+
   return (
-    <section id={id} className='m-5 md:m-20'>
+    <section
+      id={id}
+      style={containerStyle}
+      className={`mx-5 md:mx-20 rounded-lg p-5  ${
+        marginBottom ? 'mb-20' : 'mb-5'
+      } ${marginTop ? 'mt-20' : 'mb-5'}`}
+    >
       <motion.div
         key={`${moduleName}-${isInView}`}
         ref={intersectionRef}

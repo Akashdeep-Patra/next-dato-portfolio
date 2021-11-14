@@ -19,6 +19,7 @@ const Header: React.FC<HeaderProps> = () => {
       borderRadius: ['20%', '20%', '50%', '50%', '20%'],
     },
   };
+
   return (
     <motion.div className='flex items-center	 flex-row m-5 md:mx-20 justify-between min-w-max'>
       <HeaderIcon
@@ -33,11 +34,8 @@ const Header: React.FC<HeaderProps> = () => {
         className='p-5 text-center flex flex-col justify-center rounded-[6px] dark:text-white text-black '
         onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
       >
-        {theme === 'light' ? (
-          <ImSun size={40} className='' />
-        ) : (
-          <BsMoonStars size={40} className='' />
-        )}
+        {theme === 'light' && <ImSun size={40} className='' />}
+        {theme === 'dark' && <BsMoonStars size={40} className='' />}
       </motion.button>
     </motion.div>
   );

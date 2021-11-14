@@ -224,14 +224,11 @@ export const storyModuleFragment = `
   ... on ModuleStoryRecord {
     ${MODULE_BASE_FRAGMENT}
     headline
-    headlineStyle
     subtext
     ctaLabel
     ctaUrl
     ctaTrackerEvent
-    layout {
-      value
-    }
+    layout
     media {
       id
       url

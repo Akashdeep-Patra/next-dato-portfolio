@@ -1,4 +1,5 @@
 import HeroModule from '../Modules/HeroModule';
+import StoryModule from '../Modules/StoryModule';
 export interface ModularComponentProps {
   module: any;
 }
@@ -35,7 +36,7 @@ const ModularComponent: React.FC<ModularComponentProps> = ({ module }) => {
       component = <div />;
       break;
     case 'module_story':
-      component = <div />;
+      component = <StoryModule {...module} />;
       break;
     case 'module_text':
       component = <div />;

@@ -3,6 +3,7 @@ import {
   RESPONSIVE_IMAGE_FRAGMENT,
   META_TAGS_FRAGMENT,
   heroModuleFragment,
+  storyModuleFragment,
 } from './fragment';
 export async function getAllPagesSlugs() {
   const query = `
@@ -45,6 +46,7 @@ export async function getDynamicPageBySlug(slug: string) {
           title
           modules {
             ${heroModuleFragment}
+            ${storyModuleFragment}
           }
         }
       }

@@ -124,7 +124,9 @@ const HeroModule: React.FC<HeroModuleProps> = ({
         variants={childrenVariants}
         ref={heroImageRef}
       >
-        {media?.responsiveImage && <DatoImage data={media.responsiveImage} />}
+        {media?.responsiveImage && (
+          <DatoImage className='rounded-xl' data={media.responsiveImage} />
+        )}
       </motion.div>
     </div>
   );
