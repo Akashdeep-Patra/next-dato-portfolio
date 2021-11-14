@@ -4,6 +4,9 @@ import { HeaderIcon } from '../../Shared/SvgComponents';
 import { ImSun } from 'react-icons/im';
 import { useTheme } from 'next-themes';
 import { MdNightsStay } from 'react-icons/md';
+// import { useAuth0 } from '@auth0/auth0-react';
+// import Button from '../Button';
+
 export interface HeaderProps {}
 const Header: React.FC<HeaderProps> = () => {
   const { theme, setTheme } = useTheme();
@@ -19,6 +22,7 @@ const Header: React.FC<HeaderProps> = () => {
       borderRadius: ['20%', '20%', '50%', '50%', '20%'],
     },
   };
+  // const { loginWithRedirect, user, isAuthenticated, logout } = useAuth0();
   return (
     <motion.div className='flex items-center	 flex-row m-5 md:mx-20 justify-between min-w-max'>
       <HeaderIcon
