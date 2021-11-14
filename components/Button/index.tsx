@@ -20,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
       style={{}}
       target={target}
       className={`flex flex-row items-center justify-between transform
+      max-h-16
        px-5 py-3 rounded-xl active:scale-105 hover:shadow-lg hover:cursor-pointer transition-all hover:scale-110 duration-300   ${
          type === 'primary' ? 'bg-indigo-600 text-gray-50' : ''
        }`}

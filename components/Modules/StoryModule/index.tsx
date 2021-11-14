@@ -35,12 +35,22 @@ const StoryModule: React.FC<StoryModuleProps> = ({
       variants={childrenVariants}
     >
       <motion.div
-        className={`col-start-1 col-span-2`}
+        className={` ${
+          layout === 'left'
+            ? 'col-start-1 col-span-2'
+            : 'md:col-start-2 col-span-2'
+        }`}
         variants={childrenVariants}
       >
         <DatoImage data={media.responsiveImage} />
       </motion.div>
-      <div className='content grid grid-template-cols-1 gap-5 col-span-2 md:col-start-3 md:col-span-1'>
+      <div
+        className={`content grid grid-template-cols-1 gap-5 col-span-2 ${
+          layout === 'left'
+            ? 'md:col-start-3 md:col-span-1'
+            : 'md:col-start-1 md:col-span-1 md:row-start-1'
+        } `}
+      >
         <motion.h1
           className={`text-4xl font-bold dark:text-gray-200`}
           variants={childrenVariants}
