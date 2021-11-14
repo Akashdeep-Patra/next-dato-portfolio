@@ -6,14 +6,14 @@ export interface ButtonProps {
   children?: React.ReactNode;
   type?: 'primary' | 'secondary';
   href?: string;
-  target?: '__self' | '_blank';
+  target?: '_self' | '_blank';
   onClick?: any;
   className?: string;
 }
 const Button: React.FC<ButtonProps> = ({
   href,
   children,
-  target,
+  target = '_self',
   type = 'primary',
   onClick,
   className,
@@ -22,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <Wrapper
       style={{}}
+      href={href}
       target={target}
       onClick={onClick}
       className={`${className} flex flex-row items-center justify-between transform

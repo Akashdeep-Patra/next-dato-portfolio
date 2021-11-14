@@ -19,7 +19,6 @@ const Header: React.FC<HeaderProps> = () => {
       borderRadius: ['20%', '20%', '50%', '50%', '20%'],
     },
   };
-
   return (
     <motion.div className='flex items-center	 flex-row m-5 md:mx-20 justify-between min-w-max'>
       <HeaderIcon
