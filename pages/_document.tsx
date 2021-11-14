@@ -1,29 +1,33 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
 
 export default class MyDocument extends Document {
   render() {
     return (
       <Html className='dark:bg-green-500' lang='en'>
         <Head>
-          <meta charSet='utf-8' />
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1.0'
+          />
           <link rel='manifest' href='/manifest.json' />
           <link
-            href='/icons/favicon-16x16.png'
+            href='/icons/apple-touch-icon.png'
             rel='icon'
             type='image/png'
             sizes='16x16'
           />
           <link
-            href='/icons/favicon-32x32.png'
+            href='/icons/apple-touch-icon.png'
             rel='icon'
             type='image/png'
             sizes='32x32'
           />
-          <link rel='apple-touch-icon' href='/apple-icon.png'></link>
-          <meta name='theme-color' content='#317EFB' />
-          <meta name='theme-color' content='#fff' />
+          <link
+            rel='apple-touch-icon'
+            href='/icons/apple-touch-icon.png'
+          ></link>
+          <meta name='theme-color' content='#5e4ee9' />
+          <meta charSet='utf-8' />
           {/* <link
             rel="apple-touch-icon"
             sizes="180x180"
