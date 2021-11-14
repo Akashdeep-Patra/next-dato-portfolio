@@ -4,6 +4,7 @@ import {
   META_TAGS_FRAGMENT,
   heroModuleFragment,
   storyModuleFragment,
+  codeBlockModuleFragment,
 } from './fragment';
 export async function getAllPagesSlugs() {
   const query = `
@@ -47,6 +48,7 @@ export async function getDynamicPageBySlug(slug: string) {
           modules {
             ${heroModuleFragment}
             ${storyModuleFragment}
+            ${codeBlockModuleFragment}
           }
         }
       }

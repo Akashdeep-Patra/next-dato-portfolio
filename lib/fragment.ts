@@ -238,6 +238,16 @@ export const storyModuleFragment = `
     }
   }
 `;
+
+export const codeBlockModuleFragment = `
+  ... on ModuleCodeBlockRecord{
+    ${MODULE_BASE_FRAGMENT}
+    codeBlock
+    heading
+    language
+  }
+
+`;
 export const modulePricingOtc = `
  ... on ModulePricingOtcRecord {
    ${MODULE_BASE_FRAGMENT}

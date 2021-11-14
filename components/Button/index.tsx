@@ -7,19 +7,24 @@ export interface ButtonProps {
   type?: 'primary' | 'secondary';
   href?: string;
   target?: '__self' | '_blank';
+  onClick?: any;
+  className?: string;
 }
 const Button: React.FC<ButtonProps> = ({
   href,
   children,
   target,
   type = 'primary',
+  onClick,
+  className,
 }) => {
   const Wrapper = href ? 'a' : 'button';
   return (
     <Wrapper
       style={{}}
       target={target}
-      className={`flex flex-row items-center justify-between transform
+      onClick={onClick}
+      className={`${className} flex flex-row items-center justify-between transform
       max-h-16
        px-5 py-3 rounded-xl active:scale-105 hover:shadow-lg hover:cursor-pointer transition-all hover:scale-110 duration-300   ${
          type === 'primary' ? 'bg-indigo-600 text-gray-50' : ''

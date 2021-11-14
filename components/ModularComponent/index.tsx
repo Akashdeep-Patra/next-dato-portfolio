@@ -1,3 +1,4 @@
+import CodeBlockModule from '../Modules/CodeBlockModule';
 import HeroModule from '../Modules/HeroModule';
 import StoryModule from '../Modules/StoryModule';
 export interface ModularComponentProps {
@@ -13,8 +14,8 @@ const ModularComponent: React.FC<ModularComponentProps> = ({ module }) => {
       component = <div />;
 
       break;
-    case 'module_pricing':
-      component = <div />;
+    case 'module_code_block':
+      component = <CodeBlockModule {...module} />;
       break;
     case 'module_pricing_copy1':
       component = <div />;
