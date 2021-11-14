@@ -9,7 +9,7 @@ const Header: React.FC<HeaderProps> = () => {
   const { theme, setTheme } = useTheme();
   const variants = {
     light: {
-      scale: [1, 1.9, 1],
+      scale: [1, 1.9, 1.9, 1],
       rotate: [0, 70, 0],
       borderRadius: ['20%', '20%', '50%', '50%', '20%'],
     },
