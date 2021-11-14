@@ -8,6 +8,10 @@ export default class MyDocument extends Document {
       <Html className='dark:bg-green-500' lang='en'>
         <Head>
           <meta charSet='utf-8' />
+          <link rel='icon' href='favicon.svg' type='image/svg+xml' />
+          <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
+          <link rel='manifest' href='/manifest.json' />
+          <meta name='theme-color' content='#fff' />
           {/* <link
             rel="apple-touch-icon"
             sizes="180x180"
