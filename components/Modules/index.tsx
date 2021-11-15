@@ -59,16 +59,13 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
   }, [isPresent]);
   const hidden = killTransitionIn ? false : ['initialFade', 'initialSlide'];
   const animateIn = ['fadeIn', 'slideIn'];
-  const containerStyle: any = {
-    light:{ backgroundColor: accentColor?.hex},
-    dark:{}
-  };
-  
+  const containerStyle: any = 
+   theme!=='dark' && accentColor?.hex ?{backgroundColor:accentColor.hex}:{}
 
   return (
     <section
       id={id}
-      style={containerStyle[theme as string]}
+      style={containerStyle}
       className={`mx-5 md:mx-20 rounded-lg p-5  ${
         marginBottom ? 'mb-20' : 'mb-5'
       } ${marginTop ? 'mt-20' : 'mb-5'}`}
