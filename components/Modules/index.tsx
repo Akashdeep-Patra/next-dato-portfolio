@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { motion, usePresence } from 'framer-motion';
+import { useTheme } from 'next-themes';
+import { useEffect, useRef, useState } from 'react';
 import { useWindowSize } from 'react-use';
 import { useIntersection } from 'use-intersection';
-import { motion, usePresence } from 'framer-motion';
 import { staggerChildrenContainerVariants } from '../../constants';
-import { useTheme } from 'next-themes';
 export interface ModuleContainerProps {
   id: string;
   children: React.ReactNode;
@@ -59,15 +59,16 @@ const ModuleContainer: React.FC<ModuleContainerProps> = ({
   }, [isPresent]);
   const hidden = killTransitionIn ? false : ['initialFade', 'initialSlide'];
   const animateIn = ['fadeIn', 'slideIn'];
-  const containerStyle: any = {};
-  if (theme === 'light' && accentColor?.hex) {
-    containerStyle['backgroundColor'] = accentColor.hex;
-  }
+  const containerStyle: any = {
+    light:{ backgroundColor: accentColor?.hex},
+    dark:{}
+  };
+  
 
   return (
     <section
       id={id}
-      style={containerStyle}
+      style={containerStyle[theme as string]}
       className={`mx-5 md:mx-20 rounded-lg p-5  ${
         marginBottom ? 'mb-20' : 'mb-5'
       } ${marginTop ? 'mt-20' : 'mb-5'}`}
